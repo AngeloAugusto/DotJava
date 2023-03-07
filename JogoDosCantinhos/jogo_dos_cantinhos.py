@@ -98,7 +98,7 @@ def get_closest_piece(x, y):
     for point_y in points_list:
         grid_x = 0
         for point_x in points_list:
-            if math.sqrt(math.pow(x-point_x, 2)+math.pow(y-point_y, 2)) < 15:
+            if math.sqrt(math.pow(x-point_x, 2)+math.pow(y-point_y, 2)) < 30:
                 return board[grid_y][grid_x], grid_x, grid_y
             grid_x = grid_x+1
         grid_y = grid_y+1
@@ -146,7 +146,7 @@ def as_win():
     same_y = 0
     x = 0
     y = 0
-    
+
     player_pieces = get_player_pieces()
 
     if len(player_pieces) <= 0:
